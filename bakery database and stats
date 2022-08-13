@@ -1,0 +1,21 @@
+CREATE TABLE bakery (id INTEGER PRIMARY KEY, type TEXT, price INTEGER, made INTEGER, sold INTEGER, donated INTEGER, disposed INTEGER);
+INSERT INTO bakery VALUES (1, "Cookies", 12.00, 200, 100, 50, 50);
+INSERT INTO bakery VALUES (2, "Choc Candy", 15.00, 500, 300, 100, 100);
+INSERT INTO bakery VALUES (3, "Sugar Candy", 7.00, 50, 25, 20,5);
+INSERT INTO bakery VALUES (4, "Pretzels", 10.00, 74, 54,15,5);
+INSERT INTO bakery VALUES (5, "Dinner Rolls", 8.50, 200, 100, 50,50);
+INSERT INTO bakery VALUES (6, "Loaf Bread", 6.99, 35, 35, 0, 0);
+INSERT INTO bakery VALUES (7, "Bday Cakes", 15.00, 30,30, 0, 0);
+INSERT INTO bakery VALUES (8, "Pies", 23.00, 20, 18, 2, 0);
+INSERT INTO bakery VALUES (9,  "Cakes", 25.00, 30, 29, 1, 0);
+INSERT INTO bakery VALUES (10, "Danish", 9.99, 200, 150, 48, 2);
+INSERT INTO bakery VALUES (11, "Pies", 26.00, 12, 12, 0, 0);
+INSERT INTO bakery VALUES (12, "Tortes", 17.00,7, 6, 1, 0);
+INSERT INTO bakery VALUES (13, "Cinnamon Rolls",12.00, 22, 20, 1, 1);
+INSERT INTO bakery VALUES (14, "Bread Sticks", 5.00, 80, 50, 15, 15);
+INSERT INTO bakery VALUES (15, "Sweet Breads", 9.00, 15, 12, 3, 0);
+SELECT * FROM bakery ORDER BY price;
+
+SELECT SUM(made) as Total_of_Items_Made_at_the_Bakery FROM bakery;
+
+SELECT Type, MAX(price) as highest_priced_item FROM bakery;
